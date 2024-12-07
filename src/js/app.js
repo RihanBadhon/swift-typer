@@ -72,6 +72,13 @@ gameOver.volume = 0.5;
 
 
 
+let countdown = 20;
+let hits = 0;
+let copy = [...words];
+const scoreArray = [];
+let gameInterval;
+let countdownInterval;
+
 
 
 // Score Class
@@ -91,8 +98,8 @@ class Score {
     get percentage() { return this.#percentage; }
 }
   
-  let countdown = 20;
-  function getDate() { 
+
+function getDate() { 
     const options = {
       month: 'short',
       day: 'numeric',
@@ -100,11 +107,10 @@ class Score {
     return new Date().toLocaleDateString('en-ca', options);
 }
   
-let hits = 0;
+
 var percentage = ((hits / 90) * 100).toFixed(2);
   
 // Getting a random word
-let copy = [...words];
 function randomWord() {
     let word = Math.floor(Math.random() * copy.length);
     displayWord.innerText = copy[word];
@@ -132,8 +138,7 @@ function time() {
 }
 
 
-// scoreboard
-const scoreArray = [];
+
 
 
 // The Function scoreBoardDiv(toString) below used to display high scores
@@ -181,21 +186,17 @@ const stop = setInterval(function() {
       playerScore = new Score(getDate(), hits, percentage);
       score.innerHTML = `Date: ${playerScore.date}<br>Hits: ${playerScore.hits}<br>Percentage: ${playerScore.percentage}%`;
 
-
       // new score
       const newScore = {
         hits: playerScore.hits,
         percentage: playerScore.percentage
       }
 
-
       // pushing the new score
       scoreArray.push(newScore);
       scoreArray.sort((a, b) => b.hits - a.hits);
       scoreArray.splice(9);
-
-
-      // scoreArray to string
+      
       const toString = JSON.stringify(scoreArray);
       localStorage.setItem('scoreboard', toString);
 

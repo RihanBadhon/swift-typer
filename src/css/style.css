@@ -155,7 +155,7 @@ h1 {
     width: 450px;
     background-color: #56615f;
     border: ridge #202524 2px;
-    border-radius: 7px;
+    border-radius: 50px;
     margin-top: 5px;
     text-align: center;
     line-height: 50px;
@@ -164,8 +164,7 @@ h1 {
     color: #fff;
     display: none;
     box-shadow: 2px 2px 5px rgba(8, 8, 8, 0.438);
-    border-top-left-radius: 30px; 
-    border-bottom-left-radius: 30px;
+    
 }
   
 .scoreboard {
@@ -179,6 +178,8 @@ h1 {
     padding: 10px;
     background-color: rgba(87, 84, 84, 0.3);
     transition: all 1s ease-in-out;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
   
 .scoreboard.active {
