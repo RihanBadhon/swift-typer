@@ -39,14 +39,15 @@ h1 {
   
 .displayWord {
     margin: auto;
-    padding: 10px 10px 10px 10px;
-    margin-bottom: 15px;
-    font-size: 36px;
+    padding: 5px 10px 10px 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-style: italic;
     line-height: 60px;
     text-align: center;
-    color: #e03737;
+    color: #cb1818;
     font-weight: 500;
-    margin-top: 18px;
+    margin-top: 10px;
 
 }
   
@@ -176,10 +177,10 @@ h1 {
     text-align: center;
     color: #fff;
     padding: 10px;
-    background-color: rgba(87, 84, 84, 0.3);
+    background-color: rgba(152, 148, 148, 0.3);
     transition: all 1s ease-in-out;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+   
 }
   
 .scoreboard.active {
@@ -188,10 +189,13 @@ h1 {
   
   
 .scoreboard h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
   
 .scoreboard div {
+    font-size: 10px;
     margin: 10px;
     animation-name: anim;
     animation-delay: 0.5s;

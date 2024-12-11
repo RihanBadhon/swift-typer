@@ -66,7 +66,7 @@ winWord.type = 'Audio/mp3';
 winWord.volume = 0.5;
 
 // Game Over Audio
-const gameOver = new Audio('./src/game-over.mp3');
+const gameOver = new Audio('./src/audio/game-over.mp3');
 gameOver.type = 'Audio/mp3';
 gameOver.volume = 0.5;
 
@@ -78,6 +78,7 @@ let copy = [...words];
 const scoreArray = [];
 let gameInterval;
 let countdownInterval;
+let percentage = ((hits / 90) * 100).toFixed(2);
 
 
 
@@ -108,7 +109,7 @@ function getDate() {
 }
   
 
-var percentage = ((hits / 90) * 100).toFixed(2);
+
   
 // Getting a random word
 function randomWord() {
@@ -136,8 +137,6 @@ function time() {
   countdown--;
   count.innerHTML = countdown;
 }
-
-
 
 
 
