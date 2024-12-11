@@ -195,11 +195,12 @@ h1 {
 }
   
 .scoreboard div {
-    font-size: 10px;
+    font-size: 15px;
     margin: 10px;
     animation-name: anim;
     animation-delay: 0.5s;
     animation-duration: 0.75s;
+    color: #fff;
 }
   
 @keyframes anim {

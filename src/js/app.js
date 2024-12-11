@@ -1,7 +1,7 @@
 `use strict`;
 
 
-// I am little struggling with the utlity functions but i'm practicing it
+//
 
 // Array of words 
 
@@ -84,30 +84,31 @@ let percentage = ((hits / 90) * 100).toFixed(2);
 
 // Score Class
 class Score {
-    #date;
-    #hits;
-    #percentage;
-  
-    constructor(date, hits, percentage) {
-      this.#date = date;
-      this.#hits = hits;
-      this.#percentage = percentage;
-    }
-  
-    get date() { return this.#date; }
-    get hits() { return this.#hits; }
-    get percentage() { return this.#percentage; }
-}
-  
+  constructor(date, hits, percentage) {
+    this.date = date;
+    this.hits = hits;
+    this.percentage = percentage;
+  }
 
-function getDate() { 
-    const options = {
-      month: 'short',
-      day: 'numeric',
-    }  
-    return new Date().toLocaleDateString('en-ca', options);
+  getDate() {
+    return this.date;
+  }
+
+  getHits() {
+    return this.hits;
+  }
+
+  getPercentage() {
+    return this.percentage;
+  }
 }
-  
+
+const getDate = () => {
+  return new Date().toLocaleDateString('en-ca', {
+    month: 'short',
+    day: 'numeric',
+  });
+};
 
 
   
@@ -142,7 +143,7 @@ function time() {
 
 // The Function scoreBoardDiv(toString) below used to display high scores
 function scoreBoardDiv(toString) {
-  scoreboard.innerHTML = '<h3>High Scores</h3>';
+  scoreboard.innerHTML = '<h3>High Score</h3>';
   const toObject = JSON.parse(toString);
   toObject.forEach(element => {
     scoreboard.innerHTML +=
